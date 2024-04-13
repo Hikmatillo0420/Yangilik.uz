@@ -104,7 +104,7 @@ function addPost($title, $content, $category_id, $author_id, $tags=null){
 
 function getAuthor($id){
     include "data.php";
-    $sql = "SELECT * FROM user where id = :id";
+    $sql = "SELECT * FROM User where id = :id";
     $state=$conn->prepare($sql);
     $state->bindValue(":id", $id, PDO::PARAM_INT);
     $state->execute();
@@ -210,11 +210,11 @@ function getAuthorList($page, $withoutLimit=false){
     $limit = LIMIT;
     if ($withoutLimit){
 
-        $sql = "SELECT * FROM user";
+        $sql = "SELECT * FROM User";
         $state = $conn->prepare($sql);
     }else{
 //        $limit = LIMIT;
-        $sql = "SELECT * FROM user LIMIT :offset, :limit";
+        $sql = "SELECT * FROM User LIMIT :offset, :limit";
         $state = $conn->prepare($sql);
         $state->bindParam(":limit", $limit, PDO::PARAM_INT);
         $state->bindParam(":offset", $offset, PDO::PARAM_INT);

@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(isset($_POST['login'])){
+if(isset($_POST['loginUSE'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
-    include_once '../../data.php';
+    include_once '../../../data.php';
 
     $state=$conn->prepare("SELECT * FROM User WHERE username=:username");
     $state->execute(['username'=>$username]);
@@ -11,8 +11,8 @@ if(isset($_POST['login'])){
         $user = $state->fetch();
             if (password_verify($password, $user['password'])) {
                 $_SESSION['success']="ok";
-                $_SESSION['logIn']="1";
-                header('Location:/admin/index.php');exit();
+                $_SESSION['loginUSE']="1";
+                header('Location: /UserBm/index.php');exit();
             }else{
                 $_SESSION['username']= $username;
                 $_SESSION['error']="Kiritilgan parol xato !";
@@ -21,5 +21,5 @@ if(isset($_POST['login'])){
         $_SESSION['username']= $username;
         $_SESSION['error']="Kiritilgan e-mail egasi hali ro‘yxatdan o‘tmagan !";
     }
-    header('location:/Register/Login/login.php');
+    header('location:/UserBm/RegisterUser/Login/login.php');exit();
 }

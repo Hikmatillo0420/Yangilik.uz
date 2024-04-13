@@ -50,10 +50,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <div class="container">
-    <h1 id="welcome-message">Yanglik.uz saytiga xush kelibsiz</h1>
+    <h1 id="welcome-message"><b><b>Yanglik.uz</b></b> saytiga xush kelibsiz</h1>
     <div class="buttons">
         <a href="/Register/Login/login.php" class="button">Admin bo'limiga o'tish</a>
-        <a href="/user" class="button">User bo'limiga o'tish</a>
+        <a href="/UserBm/RegisterUser/Login/login.php" class="button">User bo'limiga o'tish</a>
     </div>
 </div>
 

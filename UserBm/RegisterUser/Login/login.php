@@ -37,8 +37,10 @@ session_start();
                     <label for="passInput" class="form-label">Parol</label>
                     <input type="password" class="form-control" id="passInput" name="password">
                 </div>
-                <button type="submit" class="btn btn-primary" name="login">Amalga oshirish</button>
-<!--                <a href="/Register/register.php" class="btn btn-success" style="float: right;">Ro‘yxatdan o‘tish</a>-->
+                <button type="submit" class="btn btn-primary" name="loginUSE">Amalga oshirish</button>
+                <a href="/UserBm/RegisterUser/register.php" class="btn btn-success" style="float: right;">Ro‘yxatdan o‘tish</a>
+
+
 
             </form>
         </div>

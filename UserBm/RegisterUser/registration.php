@@ -9,15 +9,15 @@ if(isset($_POST['register'])){
     if($password != $confirmPassword){
         $_SESSION['error'] = "1-parol bilan 2-parol mosmas !";
     }else{
-        include '../data.php';
-        $state=$conn->prepare("SELECT * FROM User WHERE username=:username");
+        include '../../data.php';
+        $state=$conn->prepare("SELECT * FROM user WHERE username=:username");
         $state->bindValue(":username",$username);
         $state->execute();
         if ($state->rowCount() > 0){
             $_SESSION['error'] = "Bunday e-maildagi foydalanuvchi mavjud !";
         }
         else{
-            $role="author";
+            $role="user";
             $password = password_hash($password, PASSWORD_DEFAULT);
             $state =$conn->prepare("insert into User (username, password, firstName, lastName,role)
                                     values (:username, :password, :firstname, :lastname, :role)");
@@ -36,4 +36,4 @@ if(isset($_POST['register'])){
 }else{
     $_SESSION['error']="Maydonlarni to'ldring";
 }
-header('location: /Register/register.php');
+header('location: /UserBm/RegisterUser/register.php');
