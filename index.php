@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yanglik.uz sayitiga xush kelibsiz</title>
+    <title>Yanglik.uz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
@@ -52,8 +52,8 @@
 <div class="container">
     <h1 id="welcome-message"><b><b>Yanglik.uz</b></b> saytiga xush kelibsiz</h1>
     <div class="buttons">
-        <a href="/Register/Login/login.php" class="button">Admin bo'limiga o'tish</a>
-        <a href="/UserBm/RegisterUser/Login/login.php" class="button">User bo'limiga o'tish</a>
+        <a href="/RegisterAdmin/Login/login.php" class="button">Admin bo'limiga o'tish</a>
+        <a href="/RegisterUser/Login/login.php" class="button">User bo'limiga o'tish</a>
     </div>
 </div>
 

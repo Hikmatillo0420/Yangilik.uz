@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Yanglik.uz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <div class="container"><br>
@@ -20,7 +20,7 @@ session_start();
             unset($_SESSION['error']);
         }
         if(isset($_SESSION["success"])){
-            header('location: /Register/Login/login.php');
+            header('location: /RegisterUser/Login/login.php');
 
         }
         ?>
@@ -36,7 +36,7 @@ session_start();
                     <input type="password" class="form-control" id="passInput" name="password">
                 </div>
                 <div class="mb-3">
-                    <label for="confirmPassInput" class="form-label">Elektron pochta paroli qayta kiriting </label>
+                    <label for="confirmPassInput" class="form-label">Elektron pochta paroli qayta kiriting</label>
                     <input type="password" class="form-control" id="confirmPassInput" name="confirmPassword">
                 </div>
                 <div class="mb-3">

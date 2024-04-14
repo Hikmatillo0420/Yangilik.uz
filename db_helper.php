@@ -59,10 +59,15 @@ function updateCategory($id, $title)
 }
 function deleteCategory($id){
     include "data.php";
-    $sql = "delete from category where id = :id ";
-    $state=$conn->prepare($sql);
-    $state->bindValue(":id", $id, PDO::PARAM_INT);
-    $state->execute();
+
+    try {
+        $sql = "delete from category where id = :id ";
+        $state=$conn->prepare($sql);
+        $state->bindValue(":id", $id, PDO::PARAM_INT);
+        $state->execute();
+    }catch (Exception $e){
+        header("location: /admin/CategoryPage/dontDelete.php");exit();
+    }
 }
 
 ///////////--------------------============= Postga tegshli funcsiyalar

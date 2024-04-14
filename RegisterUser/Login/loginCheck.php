@@ -3,7 +3,7 @@ session_start();
 if(isset($_POST['loginUSE'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
-    include_once '../../../data.php';
+    include_once '../../data.php';
 
     $state=$conn->prepare("SELECT * FROM User WHERE username=:username");
     $state->execute(['username'=>$username]);
@@ -21,5 +21,5 @@ if(isset($_POST['loginUSE'])){
         $_SESSION['username']= $username;
         $_SESSION['error']="Kiritilgan e-mail egasi hali ro‘yxatdan o‘tmagan !";
     }
-    header('location:/UserBm/RegisterUser/Login/login.php');exit();
 }
+header('location:/RegisterUser/Login/login.php');

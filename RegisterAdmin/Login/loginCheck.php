@@ -21,5 +21,5 @@ if(isset($_POST['login'])){
         $_SESSION['username']= $username;
         $_SESSION['error']="Kiritilgan e-mail egasi hali ro‘yxatdan o‘tmagan !";
     }
-    header('location:/Register/Login/login.php');
 }
+header('location: /RegisterAdmin/Login/login.php');

@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Yanglik.uz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
@@ -37,10 +37,9 @@ session_start();
                     <label for="passInput" class="form-label">Parol</label>
                     <input type="password" class="form-control" id="passInput" name="password">
                 </div>
-                <button type="submit" class="btn btn-primary" name="loginUSE">Amalga oshirish</button>
-                <a href="/UserBm/RegisterUser/register.php" class="btn btn-success" style="float: right;">Ro‘yxatdan o‘tish</a>
-
-
+                <button type="submit" class="btn btn-primary" name="login">Yuborish</button>
+                <a href="/index.php" class="btn btn-secondary"">Ortga qaytish</a>
+<!--                <a href="/Register/register.php" class="btn btn-success" style="float: right;">Ro‘yxatdan o‘tish</a>-->
 
             </form>
         </div>

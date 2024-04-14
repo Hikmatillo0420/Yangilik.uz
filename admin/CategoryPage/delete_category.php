@@ -11,6 +11,7 @@ if(isset($_GET['id'])){
     }
 }
 ?>
+<br>
 <div class="container">
     <h2>Rostdanam <span style="color: red;"> <?=$category_row['title']?></span> turkumni o'chirmoqchimisiz ?</h2><br>
     <a href="/admin/CategoryPage/delete_category.php?id=<?=$id?>&confirm=1" class="btn btn-danger">Ha</a>

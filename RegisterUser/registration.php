@@ -9,7 +9,7 @@ if(isset($_POST['register'])){
     if($password != $confirmPassword){
         $_SESSION['error'] = "1-parol bilan 2-parol mosmas !";
     }else{
-        include '../../data.php';
+        include '../data.php';
         $state=$conn->prepare("SELECT * FROM user WHERE username=:username");
         $state->bindValue(":username",$username);
         $state->execute();
@@ -36,4 +36,4 @@ if(isset($_POST['register'])){
 }else{
     $_SESSION['error']="Maydonlarni to'ldring";
 }
-header('location: /UserBm/RegisterUser/register.php');
+header('location: /RegisterUser/register.php');

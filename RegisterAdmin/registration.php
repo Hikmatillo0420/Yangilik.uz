@@ -24,16 +24,12 @@ if(isset($_POST['register'])){
             try {
                 $state->execute(["username"=>$username, "password"=> $password, "firstname"=>$firstName, "lastname"=>$lastName, "role"=>$role]);
                 $_SESSION['success']='ok';
-
-
             }catch (PDOException $e){
                 $_SESSION['error']=$e->getMessage();
             }
-
-
         }
     }
 }else{
     $_SESSION['error']="Maydonlarni to'ldring";
 }
-header('location: /Register/register.php');
+header('location: /RegisterAdmin/register.php');
