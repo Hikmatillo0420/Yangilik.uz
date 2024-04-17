@@ -50,6 +50,7 @@ function getCategoryById($id){
 
 function updateCategory($id, $title)
 {
+
     include "data.php";
     $sql = "update category set title = :title where id = :id";
     $state=$conn->prepare($sql);
@@ -144,7 +145,6 @@ function deleteNews($id){
     $state->bindValue(":id", $id, PDO::PARAM_INT);
     $state->execute();
 }
-
 
 ///////////--------------------============= Tag ga tegshli funcsiyalar
 function getTagList($page, $withoutLimit=false)
